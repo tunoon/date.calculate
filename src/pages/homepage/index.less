@@ -1,0 +1,64 @@
+
+
+
+.remainder {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 30%;
+  background-color: black;
+  .header {
+    width: 78%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    .text {
+      font-size: 40px;
+      font-weight: bolder;
+      letter-spacing: 4px;
+    }
+    .year {
+      color: #2e93e6;
+    }
+    .day {
+      color: #f48e19;
+    }
+    .percent {
+      color: #fa1688;
+    }
+  }
+  .dots {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 12px 8px;
+      background-color: #31fa16;
+    }
+    .next {
+      opacity: 0.4;
+    }
+    .curr {
+      animation: curr 1s ease infinite;
+      box-shadow: 0 0 1vw #29fa16, 0 0 3vw #16fa75, 0 0 10vw #16faef,
+        0 0 10vw #16faef, 0 0 0.4vw #28a8fe, 0vw 0vw 0.1vw #fff;
+    }
+  }
+}
+
+@keyframes curr {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+}
